@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PasswordLog">
+    <ImageView
+        android:id="@+id/iv_bank_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bank_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+    <LinearLayout
+        android:id="@+id/ll_userphonenum"
+        android:layout_below="@id/iv_bank_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号:"
+            android:layout_marginLeft="5dp"/>
+        <EditText
+            android:id="@+id/ev_phonenumber"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_userphonenum">
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密 码:"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="3dp"/>
+
+        <EditText
+            android:id="@+id/ev_password"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@id/tv_password" />
+
+        <Button
+            android:id="@+id/btn_forgetpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:textSize="13sp"
+            android:layout_toRightOf="@id/ev_password"
+            android:background="@drawable/btn_blank"
+            android:textColor="#1274C3"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_password"
+        android:text="登录" />
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="注册"
+        android:background="@drawable/btn_blank"
+        android:textColor="#1274C3"
+        android:layout_below="@id/btn_log"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
